@@ -1,3 +1,5 @@
+# Instalar o Flask primeiro antes de quaisquer ações com o arquivo.
+
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
