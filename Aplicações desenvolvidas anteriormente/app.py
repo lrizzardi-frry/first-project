@@ -19,7 +19,7 @@ def api_response():
 @app.route('/dados', methods=['POST'])
 def get_data_from_html():
   Emails11 = request.form['EMAIL']
-  Emails12 = open("/Users/lukin/Desktop/Site - MEO/emails.txt", "a")
+  Emails12 = open("./emails.txt", "a")
   print("O e-mail cadastrado foi: " + Emails11)
   Emails12.write(" " + Emails11 + ",")
 

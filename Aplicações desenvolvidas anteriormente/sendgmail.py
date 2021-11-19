@@ -4,7 +4,7 @@
 # =============================================================================
 import smtplib
 
-ListaEmails = open('/Users/lukin/Desktop/Site - MEO/emails.txt')
+ListaEmails = open('./emails.txt')
 emails = ListaEmails.read()
 print(emails)
 for item in emails.split():
@@ -20,14 +20,14 @@ gmail_app_password = '(senha)'
 # =============================================================================
 sent_from = gmail_user
 sent_to = ListaEmails2
-sent_subject = "Email do Furry"  # Título do e-mail
+sent_subject = "Email Teste"  # Título do e-mail
 sent_body = (u"Gente, finalmente, gra\u00e7as a Deus.\n\n"
              u"Depois de muita a\u00e7\u00e3o\n"
              # https://unicode-table.com/pt/ | Palavras em Unicode, que estão fora da tabela ASCII.
              u"\n"
              u"a API está funcionando corretamente.\n\n"
              u"Atenciosamente,\n"
-             u"Lurgen, conhecido como Lucas.\n")  # Corpo do e-mail
+             u"Lucas, developer da API.\n")  # Corpo do e-mail
 
 email_text = """\
 From: %s
