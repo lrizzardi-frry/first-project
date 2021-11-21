@@ -4,6 +4,16 @@
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
 
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+
+@app.route('/', methods=['GET'])
+def show_index():
+    return render_template('primeiroTesteEmHTML.html')
+
+
 def print_hi():
     name = input("Hey, qual o seu nome? ")
     # Use a breakpoint in the code line below to debug your script.
@@ -12,5 +22,4 @@ def print_hi():
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi()
-
+    app.run('localhost', 8000)
